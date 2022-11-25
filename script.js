@@ -1,4 +1,4 @@
-const taxiFareApiUrl = 'https://YOUR_API_URL/predict'
+const taxiFareApiUrl = 'https://taxifare.lewagon.ai/predict'
 const centralCoordinates = [-74.00597, 40.71427]; // starting position [lng, lat]
 
 if (window.location.href.includes('https://taxifare.lewagon.com')) {
@@ -198,7 +198,7 @@ const predict = () => {
         query.push(`${param}=${data[param]}`)
       })
       const querystring = query.join('&')
-      const url = `${taxiFareApiUrl}?${querystring}`
+      const url = `https://taxifare.lewagon.ai/`
       fetch(url, {
         method: 'GET',
         headers: {
